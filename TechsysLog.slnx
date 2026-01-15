@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/Itens de Solução/">
+    <File Path="docker-compose.yml" />
+  </Folder>
+  <Project Path="TechsysLog.Application/TechsysLog.Application.csproj" />
+  <Project Path="TechsysLog.Domain/TechsysLog.Domain.csproj" />
+  <Project Path="TechsysLog.Infrastructure/TechsysLog.Infrastructure.csproj" />
+  <Project Path="TechsysLog.Realtime/TechsysLog.Realtime.csproj" Id="f68c6dfc-fa3e-4453-8feb-60548c4fda63" />
+  <Project Path="TechsysLog.Tests/TechsysLog.Tests.csproj" />
+  <Project Path="TechsysLog/TechsysLog.csproj" />
+</Solution>
