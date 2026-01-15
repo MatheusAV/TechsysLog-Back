@@ -1,11 +1,17 @@
-﻿namespace TechsysLog.Domain.Common.Entities
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+
+namespace TechsysLog.Domain.Common.Entities
 {
     public sealed class Notification
     {
-        public string Id { get; protected set; } = Guid.NewGuid().ToString("N");
-        public string UserId { get; private set; } = default!;
-        public string Message { get; private set; } = default!;
-        public bool IsRead { get; private set; }       
+        [BsonId]
+        [BsonRepresentation(BsonType.String)]
+        public string Id { get; set; } = default!;
+
+        public string UserId { get; set; } = default!;
+        public string Message { get; set; } = default!;
+        public bool IsRead { get; set; }
         public DateTime CreatedAt { get; protected set; } = DateTime.UtcNow;
 
         private Notification() { }
