@@ -76,6 +76,7 @@ namespace TechsysLog.Infrastructure.Persistence.Mongo.Mappers
         public static Notification ToDomain(this NotificationDocument doc)
         {
             var n = new Notification(doc.UserId, doc.Message);
+            n.Id = doc.Id;
             if (doc.IsRead) n.MarkAsRead();
             return n;
         }
